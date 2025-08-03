@@ -56,7 +56,7 @@ $ rebar3 as prod release
 $ _build/prod/rel/tuningfork/bin/tuningfork foreground
 ```
 
-## Docker/Container Usage
+## Container Usage
 
 Build and run using the provided Containerfile:
 
