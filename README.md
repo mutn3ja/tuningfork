@@ -1,10 +1,10 @@
-# Tuningfork
+# tuningfork
 
 A high-performance TCP proxy server built with Erlang/OTP that forwards traffic from clients to configurable upstream hosts.
 
 ## Overview
 
-Tuningfork is a lightweight TCP proxy that accepts incoming connections and forwards all traffic to a specified upstream server. It's designed for scenarios where you need to route traffic through an intermediary server.
+tuningfork is a lightweight TCP proxy that accepts incoming connections and forwards all traffic to a specified upstream server. It's designed for scenarios where you need to route traffic through an intermediary server.
 
 ## Features
 
@@ -95,7 +95,7 @@ $ curl --resolve 'example.com:443:127.0.0.1' https://www.example.com
 
 ## Architecture
 
-Tuningfork uses the Ranch library for connection handling and implements a `gen_statem` behavior for connection state management:
+tuningfork uses the Ranch library for connection handling and implements a `gen_statem` behavior for connection state management:
 
 - **Ranch TCP Listener**: Accepts incoming connections on port 443
 - **Proxy Protocol Module**: Handles bidirectional data forwarding
