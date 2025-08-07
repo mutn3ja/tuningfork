@@ -37,7 +37,7 @@ connected(
     }
 ) ->
     {ok, ClientSocket} = ranch:handshake(Ref),
-	UpstreamHostAddr = s:getenv("TUNINGFORK_UPSTREAM_HOST_ADDR", "google.com"),
+	UpstreamHostAddr = os:getenv("TUNINGFORK_UPSTREAM_HOST_ADDR", "google.com"),
 	{ok, ServerSocket} = gen_tcp:connect(UpstreamHostAddr, 443, [binary, {active, once}, {packet, 0}]),
     ok = Transport:setopts(ClientSocket, [binary, {active, once}, {packet, 0}]),
     {keep_state, StateData#state{client_socket = ClientSocket, server_socket = ServerSocket}};
